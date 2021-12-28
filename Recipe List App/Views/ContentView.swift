@@ -9,29 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var vm = RecipeViewModel()
-    
     var body: some View {
         
-        NavigationView {
-            List(vm.recipes){ r in
-                
-                NavigationLink(destination: {
-                    RecipeDetailView(recipe: r)
-                }, label: {
-                    HStack{
-                        Image(r.image)
-                            .resizable()
-                            .scaledToFill()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 125, height: 100, alignment: .center)
-                        Text(r.name)
-                            .font(.system(size: 21, weight: .bold, design: .rounded))
-                            .padding()
-                    }
-                })
-            }
-            .navigationTitle("Homecook")
+        TabView {
+            
+            RecipeListView()
+                .tabItem {
+                    Image(systemName: "lasso.and.sparkles")
+                }
+            Text("Featured")
+                .tabItem {
+                    Image(systemName: "folder.fill")
+                }
         }
     }
 }
