@@ -13,25 +13,27 @@ struct RecipeListView: View {
     
     var body: some View {
         
-        NavigationView {
-            List(vm.recipes){ r in
-                
-                NavigationLink(destination: {
-                    RecipeDetailView(recipe: r)
-                }, label: {
-                    HStack{
-                        Image(r.image)
-                            .resizable()
-                            .scaledToFill()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 125, height: 100, alignment: .center)
-                        Text(r.name)
-                            .font(.system(size: 21, weight: .bold, design: .rounded))
-                            .padding()
-                    }
-                })
+        GeometryReader { geo in
+            NavigationView {
+                List(vm.recipes){ r in
+                    
+                    NavigationLink(destination: {
+                        RecipeDetailView(recipe: r)
+                    }, label: {
+                        HStack{
+                            Image(r.image)
+                                .resizable()
+                                .scaledToFit()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: geo.size.width/4, height: geo.size.height/9, alignment: .leading)
+                            Text(r.name)
+                                .font(.system(size: 21, weight: .bold, design: .rounded))
+                                .padding()
+                        }
+                    })
+                }
+                .navigationTitle("Homecook")
             }
-            .navigationTitle("Homecook")
         }
     }}
 

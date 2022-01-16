@@ -1,7 +1,5 @@
-//
 //  ContentView.swift
 //  Recipe List App
-//
 //  Created by Dhruv Reddy on 12/23/21.
 //
 
@@ -9,19 +7,23 @@ import SwiftUI
 
 struct ContentView: View {
     
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
     var body: some View {
-        
+
         TabView {
-            
             RecipeListView()
                 .tabItem {
                     Image(systemName: "lasso.and.sparkles")
                 }
-            Text("Featured")
+            RecipeFeaturedView()
                 .tabItem {
                     Image(systemName: "folder.fill")
                 }
-        }
+        
+        }.accentColor(.black)
+
     }
 }
 
