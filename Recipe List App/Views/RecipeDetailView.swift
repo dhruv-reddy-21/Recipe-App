@@ -15,25 +15,6 @@ struct RecipeDetailView: View {
         
         ScrollView {
             
-            HStack {
-                
-                Button {
-                    ContentView()
-                } label: {
-                    Text("< Back")
-                        .foregroundColor(.gray)
-                        .font(.system(size: 20, weight: .bold, design: .rounded))
-                        .padding(.leading)
-                }
-                Spacer()
-                Text(recipe.name)
-                    .foregroundColor(.orange)
-                .font(.system(size: 25, weight: .bold, design: .rounded))
-                
-                Spacer()
-                Spacer()
-            }
-            
             Image(recipe.image)
                 .resizable()
                 .scaledToFill()
@@ -43,11 +24,11 @@ struct RecipeDetailView: View {
                     .font(.title3)
                     .fontWeight(.bold)
                     .padding(.horizontal)
-
                 
-                ForEach(recipe.ingredients, id: \.self) { item in
+                
+                ForEach(recipe.ingredients) { item in
                     
-                    Text("· " + item)
+                    Text("· " + item.name)
                         .padding(.vertical, 1)
                         .padding(.horizontal)
                 }
@@ -67,7 +48,6 @@ struct RecipeDetailView: View {
             }
             
         }
-        .navigationBarHidden(true)
     }
 }
 
