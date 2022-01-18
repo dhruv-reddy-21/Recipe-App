@@ -23,9 +23,10 @@ struct RecipeListView: View {
                         HStack{
                             Image(r.image)
                                 .resizable()
-                                .scaledToFit()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: geo.size.width/4, height: geo.size.height/9, alignment: .leading)
+                                .scaledToFill()
+                                .frame(width: 75, height: 75, alignment: .center)
+                                .clipped()
+                                .cornerRadius(12)
                             Text(r.name)
                                 .font(.system(size: 21, weight: .bold, design: .rounded))
                                 .padding()
