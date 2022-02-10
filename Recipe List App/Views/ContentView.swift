@@ -22,7 +22,9 @@ struct ContentView: View {
                     Image(systemName: "folder.fill")
                 }
         
-        }.accentColor(.black)
+        }
+        .accentColor(.black)
+        .environmentObject(RecipeViewModel())
 
     }
 }
