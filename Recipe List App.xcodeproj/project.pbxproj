@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70CE26A27D856EC0086A251 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70CE26927D856EC0086A251 /* Rational.swift */; };
 		C7244980279366510097FDAC /* RecipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724497F279366510097FDAC /* RecipeFeaturedView.swift */; };
 		C75032A627962AC2009ECB67 /* Ingrediant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75032A527962AC2009ECB67 /* Ingrediant.swift */; };
 		C752BA60277A949C00E1C945 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C752BA5F277A949C00E1C945 /* RecipeListView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70CE26927D856EC0086A251 /* Rational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
 		C724497F279366510097FDAC /* RecipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeaturedView.swift; sourceTree = "<group>"; };
 		C75032A527962AC2009ECB67 /* Ingrediant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingrediant.swift; sourceTree = "<group>"; };
 		C752BA5F277A949C00E1C945 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C7986E262774FB6C005F2B3E /* DataService.swift */,
+				C70CE26927D856EC0086A251 /* Rational.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				C7986E232774EF92005F2B3E /* Recipe.swift in Sources */,
 				C7986E102774EE31005F2B3E /* ContentView.swift in Sources */,
 				C7986E0E2774EE31005F2B3E /* Recipe_List_AppApp.swift in Sources */,
+				C70CE26A27D856EC0086A251 /* Rational.swift in Sources */,
 				C7244980279366510097FDAC /* RecipeFeaturedView.swift in Sources */,
 				C7986E272774FB6C005F2B3E /* DataService.swift in Sources */,
 			);
